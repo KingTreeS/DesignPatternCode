@@ -1,0 +1,89 @@
+﻿  IteratorPattern.cpp
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(951): error C2528: “pointer”: 指向引用的指针非法
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(903): note: 参见对正在编译的 类 模板 实例化 "std::allocator<_Ty>" 的引用
+          with
+          [
+              _Ty=std::string &
+          ]
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(360): note: 参见对正在编译的 类 模板 实例化 "std::allocator_traits<_Alloc>" 的引用
+          with
+          [
+              _Alloc=std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>
+          ]
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(360): note: 参见对正在编译的 别名 模板 实例化 "std::_Rebind_alloc_t<std::allocator<_Ty>,_Ty>" 的引用
+          with
+          [
+              _Ty=std::string &
+          ]
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(405): note: 参见对正在编译的 类 模板 实例化 "std::_Vec_base_types<_Ty,_Alloc>" 的引用
+          with
+          [
+              _Ty=std::string &,
+              _Alloc=std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>
+          ]
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(626): note: 参见对正在编译的 类 模板 实例化 "std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>" 的引用
+          with
+          [
+              _Ty=std::string &,
+              _Alloc=std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>
+          ]
+  e:\vsproject\designpattern\iteratorpattern\concreteaggregate.h(36): note: 参见对正在编译的 类 模板 实例化 "std::vector<T &,std::allocator<_Ty>>" 的引用
+          with
+          [
+              T=std::string,
+              _Ty=std::string &
+          ]
+  e:\vsproject\designpattern\iteratorpattern\iteratorpattern.cpp(10): note: 参见对正在编译的 类 模板 实例化 "ConcreteAggregate<std::string>" 的引用
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(952): error C2528: “const_pointer”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(970): error C2528: “address”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(975): error C2528: “address”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(989): error C2528: “_Ptr”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(996): error C2528: “allocate”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(1002): error C2528: “allocate”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(840): error C2528: “abstract declarator”: 指向引用的指针非法
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(905): note: 参见对正在编译的 类 模板 实例化 "std::_Default_allocator_traits<_Alloc>" 的引用
+          with
+          [
+              _Alloc=std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>
+          ]
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(841): error C2528: “abstract declarator”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(860): error C2528: “<template-parameter>”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(866): error C2528: “<template-parameter>”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(923): error C2528: “abstract declarator”: 指向引用的指针非法
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(363): note: 查看指向正在编译的变量模板“const bool _Is_simple_alloc_v<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > &> >”的引用
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(923): error C2528: “<template-parameter>”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(924): error C2528: “abstract declarator”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(924): error C2528: “<template-parameter>”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(371): error C2528: “<template-parameter>”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(934): error C2528: “abstract declarator”: 指向引用的指针非法
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(411): note: 参见对正在编译的 类 模板 实例化 "std::_Simple_types<_Ty>" 的引用
+          with
+          [
+              _Ty=std::string &
+          ]
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\xmemory0(935): error C2528: “abstract declarator”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(936): error C2535: “void std::vector<T &,std::allocator<_Ty>>::push_back(_Ty)”: 已经定义或声明成员函数
+          with
+          [
+              T=std::string,
+              _Ty=std::string &
+          ]
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(930): note: 参见“std::vector<T &,std::allocator<_Ty>>::push_back”的声明
+          with
+          [
+              T=std::string,
+              _Ty=std::string &
+          ]
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(1024): error C2535: “std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> std::vector<_Ty,std::allocator<_Ty>>::insert(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,_Ty)”: 已经定义或声明成员函数
+          with
+          [
+              _Ty=std::string &
+          ]
+  e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(1018): note: 参见“std::vector<T &,std::allocator<_Ty>>::insert”的声明
+          with
+          [
+              T=std::string,
+              _Ty=std::string &
+          ]
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(1608): error C2528: “data”: 指向引用的指针非法
+e:\visualstudio\ide\vc\tools\msvc\14.16.27023\include\vector(1613): error C2528: “data”: 指向引用的指针非法
