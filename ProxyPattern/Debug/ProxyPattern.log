@@ -1,2 +1,3 @@
-﻿  ProxyPattern.cpp
-  ProxyPattern.vcxproj -> E:\VSProject\DesignPattern\Debug\ProxyPattern.exe
+﻿  pch.cpp
+  ProxyPattern.cpp
+  ProxyPattern.vcxproj -> E:\VSProject\DesignPattern\DesignPatternCode\Debug\ProxyPattern.exe

@@ -14,11 +14,12 @@ public:
 public:
 	virtual void Show() const override
 	{
+		std::cout << "TÐô" << std::endl;
+
 		if (m_pBase != nullptr)
 		{
 			m_pBase->Show();
 		}
-		std::cout << "TÐô" << std::endl;
 		return;
 	}
 };

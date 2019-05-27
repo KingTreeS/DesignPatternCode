@@ -19,7 +19,34 @@ public:
 		m_pNationalDebtA = new NationalDebtA();
 		m_pRealtyA = new RealtyA();
 	}
-	virtual ~Fund() {};
+	virtual ~Fund() 
+	{
+		if (m_pStockA != nullptr)
+		{
+			delete m_pStockA;
+			m_pStockA = nullptr;
+		}
+		if (m_pStockB != nullptr)
+		{
+			delete m_pStockB;
+			m_pStockB = nullptr;
+		}
+		if (m_pStockC != nullptr)
+		{
+			delete m_pStockC;
+			m_pStockC = nullptr;
+		}
+		if (m_pNationalDebtA != nullptr)
+		{
+			delete m_pNationalDebtA;
+			m_pNationalDebtA = nullptr;
+		}
+		if (m_pRealtyA != nullptr)
+		{
+			delete m_pRealtyA;
+			m_pRealtyA = nullptr;
+		}
+	}
 
 public:
 	void FundSell()

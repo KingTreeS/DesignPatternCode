@@ -12,10 +12,11 @@ int main()
 	BigTrouser trouser;
 	Shoes shoes;
 
-	person.SetDecoration(&shoes);
-	shoes.SetDecoration(&trouser);
-	trouser.SetDecoration(&shirts);
-	person.Show();
+	shirts.SetDecoration(&trouser);
+	trouser.SetDecoration(&shoes);
+	shoes.SetDecoration(&person);
+
+	shirts.Show();
 
 	return 0; 
 }

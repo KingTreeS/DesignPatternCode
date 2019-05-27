@@ -15,11 +15,6 @@ public:
 public:
 	virtual void Show() const override
 	{
-
-		if (m_pBase != nullptr)
-		{
-			m_pBase->Show();
-		}
 		std::cout << "×°°çµÄ" << m_pName << std::endl;
 		return;
 	}

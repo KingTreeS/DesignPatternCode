@@ -13,11 +13,12 @@ public:
 protected:
 	virtual void Show() const override
 	{
+		std::cout << "¿å¿ã" << std::endl;
+
 		if (m_pBase != nullptr)
 		{
 			m_pBase->Show();
 		}
-		std::cout << "¿å¿ã" << std::endl;
 		return;
 	}
 };

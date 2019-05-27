@@ -19,9 +19,16 @@ public:
 		}
 		m_pPursuit = new Pursuit(girl);
 	}
-	virtual ~Proxy() {};
+	virtual ~Proxy() 
+	{
+		if (m_pPursuit != nullptr)
+		{
+			delete m_pPursuit;
+			m_pPursuit = nullptr;
+		}
+	}
 
-public:
+protected:
 	virtual void GiveDolls() const override
 	{
 		if (m_pPursuit == nullptr)

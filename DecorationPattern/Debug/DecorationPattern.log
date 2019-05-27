@@ -1,2 +1,3 @@
-﻿  DecorationPattern.cpp
-  DecorationPattern.vcxproj -> E:\VSProject\DesignPattern\Debug\DecorationPattern.exe
+﻿  pch.cpp
+  DecorationPattern.cpp
+  DecorationPattern.vcxproj -> E:\VSProject\DesignPattern\DesignPatternCode\Debug\DecorationPattern.exe

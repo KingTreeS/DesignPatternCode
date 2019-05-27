@@ -8,7 +8,7 @@ public:
 	IGiveGift() {};
 	virtual ~IGiveGift() {};
 
-protected:
+public:
 	virtual void GiveDolls() const = 0;
 	virtual void GiveFlowers() const = 0;
 	virtual void GiveChocolate() const = 0;

@@ -12,7 +12,18 @@ class WebsiteFactory
 {
 public:
 	WebsiteFactory() {};
-	virtual ~WebsiteFactory() {};
+	virtual ~WebsiteFactory() 
+	{
+		if (!m_pWebsiteList.empty())
+		{
+			for (auto delItem : m_pWebsiteList)
+			{
+				delete delItem.second;
+				delItem.second = nullptr;
+			}
+			m_pWebsiteList.clear();
+		}
+	}
 
 public:
 	Website* GetWebsiteCategory(std::string key)

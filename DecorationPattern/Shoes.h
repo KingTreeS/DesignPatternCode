@@ -13,11 +13,12 @@ public:
 protected:
 	virtual void Show() const override
 	{
+		std::cout << "°×Ð¬" << std::endl;
+
 		if (m_pBase != nullptr)
 		{
 			m_pBase->Show();
 		}
-		std::cout << "°×Ð¬" << std::endl;
 		return;
 	}
 };

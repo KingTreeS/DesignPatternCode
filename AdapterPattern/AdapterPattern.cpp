@@ -34,7 +34,5 @@ int main()
 	delete player;
 	player = nullptr;
 
-
-
 	return 0;
 }
