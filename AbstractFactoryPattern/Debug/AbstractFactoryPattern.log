@@ -1,2 +1,3 @@
-﻿  AbstractFactoryPattern.cpp
-  AbstractFactoryPattern.vcxproj -> E:\VSProject\DesignPattern\Debug\AbstractFactoryPattern.exe
+﻿  pch.cpp
+  AbstractFactoryPattern.cpp
+  AbstractFactoryPattern.vcxproj -> E:\VSProject\DesignPattern\DesignPatternCode\Debug\AbstractFactoryPattern.exe

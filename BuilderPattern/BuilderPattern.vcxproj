@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Person.h" />
     <ClInclude Include="PersonBuilder.h" />
     <ClInclude Include="PersonDirector.h" />
     <ClInclude Include="PersonFatBuilder.h" />

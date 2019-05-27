@@ -14,5 +14,11 @@ int main()
 	resume.Show();
 	resume2->Show();
 
+	if (resume2 != nullptr)
+	{
+		delete resume2;
+		resume2 = nullptr;
+	}
+
 	return 0;
 }

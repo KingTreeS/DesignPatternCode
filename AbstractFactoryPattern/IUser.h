@@ -15,8 +15,8 @@ public:
 	virtual void GetUserInfo(int id) = 0;
 
 protected:
-	std::string m_pName;
-	int m_pId;
+	std::string		m_pName;
+	int				m_pId;
 
 };
 #endif // !_I_USER_H__

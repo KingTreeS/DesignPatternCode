@@ -1,2 +1,3 @@
-﻿  PrototypePattern.cpp
-  PrototypePattern.vcxproj -> E:\VSProject\DesignPattern\Debug\PrototypePattern.exe
+﻿  pch.cpp
+  PrototypePattern.cpp
+  PrototypePattern.vcxproj -> E:\VSProject\DesignPattern\DesignPatternCode\Debug\PrototypePattern.exe

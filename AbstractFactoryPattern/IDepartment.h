@@ -15,8 +15,8 @@ public:
 	virtual void GetDepartmentInfo(int id) = 0;
 
 protected:
-	std::string m_pDepartment;
-	int m_pId;
+	std::string		m_pDepartment;
+	int				m_pId;
 
 };
 #endif // !_I_DEPARTMENT_H__

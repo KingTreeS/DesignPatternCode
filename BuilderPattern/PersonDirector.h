@@ -2,20 +2,21 @@
 #ifndef _PERSON_DIRECTOR_H__
 #define _PERSON_DIRECTOR_H__
 
+#include "Person.h"
 #include "PersonBuilder.h"
 
 class PersonDirector
 {
 public:
-	PersonDirector(PersonBuilder& builder) { m_pBuilder = &builder; }
+	PersonDirector(PersonBuilder* builder) :m_pBuilder(builder) {};
 	virtual ~PersonDirector() {};
 
 public:
-	void Director()
+	Person* Director()
 	{
 		if (m_pBuilder == nullptr)
 		{
-			return;
+			return nullptr;
 		}
 
 		m_pBuilder->BuildHead();
@@ -24,6 +25,8 @@ public:
 		m_pBuilder->BuildHand();
 		m_pBuilder->BuildLeg();
 		m_pBuilder->BuildFeet();
+
+		return m_pBuilder->GetPerson();
 	}
 
 private:
