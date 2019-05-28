@@ -7,7 +7,7 @@
 class Command
 {
 public:
-	Command(Barbecuer& barbecuer) :m_pBarbecuer(nullptr) { m_pBarbecuer = &barbecuer; }
+	Command(Barbecuer& barbecuer) :m_pBarbecuer(&barbecuer) {};
 	virtual ~Command() {};
 
 public:

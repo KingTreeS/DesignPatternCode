@@ -11,28 +11,10 @@
 class UnitedNationsSecurityCouncil :public UnitedNations
 {
 public:
-	UnitedNationsSecurityCouncil() :m_pAmerica(nullptr), m_pIraq(nullptr) {};
+	UnitedNationsSecurityCouncil() {};
 	virtual ~UnitedNationsSecurityCouncil() {};
 
 public:
-	void SetCountryAmerica(America* country)
-	{
-		if (country == nullptr)
-		{
-			return;
-		}
-		m_pAmerica = country;
-	}
-
-	void SetCountryIraq(Iraq* country)
-	{
-		if (country == nullptr)
-		{
-			return;
-		}
-		m_pIraq = country;
-	}
-
 	virtual void SendMessage(CountryInfo info, std::string msg) override
 	{
 		switch (info)
@@ -40,17 +22,33 @@ public:
 		case AMERICA:
 			if (m_pIraq != nullptr)
 			{
-				m_pIraq->Send(msg);
+				m_pIraq->GetMessage(msg);
 			}
 			break;
 		case IRAQ:
 			if (m_pAmerica != nullptr)
 			{
-				m_pAmerica->Send(msg);
+				m_pAmerica->GetMessage(msg);
 			}
 			break;
 		default:
 			break;
+		}
+	}
+
+	void SetAmerica(America* america)
+	{
+		if (america != nullptr)
+		{
+			m_pAmerica = america;
+		}
+	}
+
+	void SetIraq(Iraq* iraq)
+	{
+		if (iraq != nullptr)
+		{
+			m_pIraq = iraq;
 		}
 	}
 

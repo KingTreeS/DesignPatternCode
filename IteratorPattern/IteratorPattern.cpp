@@ -1,25 +1,34 @@
 ﻿#include "pch.h"
 #include <iostream>
 #include <string>
+#include "Aggregate.h"
+#include "Iterator.h"
 #include "ConcreteAggregate.h"
 #include "ConcreteIterator.h"
 
 int main()
 {
-	ConcreteAggregate<std::string>* concreteAggregate = nullptr;
-	concreteAggregate = new ConcreteAggregate<std::string>();
+	Aggregate* concreteAggregate = new ConcreteAggregate();
 
-	concreteAggregate->Push("Hello");
-	concreteAggregate->Push("BigTree");
-	concreteAggregate->Push("World");
+	std::string h("Hello");
+	concreteAggregate->SetData(h);
+	std::string m("My");
+	concreteAggregate->SetData(m);
+	std::string w("World");
+	concreteAggregate->SetData(w);
 
-	ConcreteIterator<std::string>* iter = nullptr;
-	iter = new ConcreteIterator<std::string>(concreteAggregate);
+	Iterator* iter = concreteAggregate->CreateIterator();
 
-	std::cout << iter->First() << "is OK" << std::endl;
+	std::cout << iter->First() << " is OK" << std::endl;
 	while (!iter->IsDone())
 	{
-		std::cout << iter->Next() << "is OK" << std::endl;
+		std::cout << iter->Next() << " is OK" << std::endl;
+	}
+
+	if (concreteAggregate != nullptr)
+	{
+		delete concreteAggregate;
+		concreteAggregate = nullptr;
 	}
 	return 0;
 }

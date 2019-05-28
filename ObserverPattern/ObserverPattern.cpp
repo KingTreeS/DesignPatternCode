@@ -6,13 +6,12 @@
 
 int main()
 {
-	BossSubject subject("BigTree");
+	BossSubject subject("BigBoss");
 
-	NBAObserver observer1(&subject, "Lu");
-	NBAObserver observer2(&subject, "Wang");
-	NBAObserver observer3(&subject, "Yang");
-
-	StockObserver observer4(&subject, "Li");
+	NBAObserver observer1("Lu");
+	NBAObserver observer2("Wang");
+	NBAObserver observer3("Yang");
+	StockObserver observer4("Li");
 
 	subject.Attach(&observer1);
 	subject.Attach(&observer2);

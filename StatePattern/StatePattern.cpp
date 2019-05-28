@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include <iostream>
 #include "Work.h"
+#include "State.h"
 #include "ForenoonState.h"
 
 int main()

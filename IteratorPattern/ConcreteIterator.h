@@ -2,51 +2,94 @@
 #ifndef _CONCRETE_ITERATOR_H__
 #define _CONCRETE_ITERATOR_H__
 
+#include <vector>
 #include "Iterator.h"
-#include "Aggregate.h"
+#include "ConcreteAggregate.h"
 
-template<typename T>
-class ConcreteIterator :public Iterator<T>
+class ConcreteIterator :public Iterator
 {
 public:
-	ConcreteIterator(Aggregate<T>* aggregate)
-		: m_pAggregate(nullptr)
+	ConcreteIterator(std::vector<std::string>* dataList)
+		: m_pDataList(nullptr)
 		, m_pCount(0)
 	{
-		if (aggregate != nullptr)
+		if (dataList != nullptr)
 		{
-			m_pAggregate = aggregate;
+			m_pDataList = dataList;
 		}
 	}
 	virtual ~ConcreteIterator() {};
 
 public:
-	virtual T First() override
+	virtual std::string First() override
 	{
-		return m_pAggregate->Pop(0);
+		if (m_pDataList == nullptr)
+		{
+			return NULL;
+		}
+
+		if ((*m_pDataList).empty())
+		{
+			return NULL;
+		}
+
+		return (*m_pDataList).at(0);
 	}
 
-	virtual T Next() override
+	virtual std::string Next() override
 	{
-		m_pCount++;
-		if (m_pCount < m_pAggregate->Count())
+		if (m_pDataList == nullptr)
 		{
-			return m_pAggregate->Pop(m_pCount);
+			return NULL;
+		}
+
+		if ((*m_pDataList).empty())
+		{
+			return NULL;
+		}
+
+		m_pCount++;
+		if (m_pCount < (*m_pDataList).size())
+		{
+			return (*m_pDataList).at(m_pCount);
 		}
 	}
 
 	virtual bool IsDone() override
 	{
-		return (m_pCount >= m_pAggregate->Count() ? true : false);
+		if (m_pDataList == nullptr)
+		{
+			return NULL;
+		}
+
+		if ((*m_pDataList).empty())
+		{
+			return NULL;
+		}
+
+		return (m_pCount + 1 >= (*m_pDataList).size() ? true : false);
 	}
 
-	virtual T CurrentItem() override
+	virtual std::string CurrentItem() override
 	{
-		return m_pAggregate->Pop(m_pCount);
+		if (m_pDataList == nullptr)
+		{
+			return NULL;
+		}
+
+		if ((*m_pDataList).empty())
+		{
+			return NULL;
+		}
+
+		if (m_pCount < (*m_pDataList).size())
+		{
+			return (*m_pDataList).at(m_pCount);
+		}
 	}
 
 private:
-	Aggregate<T>* m_pAggregate;
+	std::vector<std::string>* m_pDataList;
 	int m_pCount;
 
 };

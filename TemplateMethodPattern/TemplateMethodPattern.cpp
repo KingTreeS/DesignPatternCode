@@ -17,5 +17,17 @@ int main()
 	test2->Question2();
 	test2->Question3();
 
+	if (test1 != nullptr)
+	{
+		delete test1;
+		test1 = nullptr;
+	}
+
+	if (test2 != nullptr)
+	{
+		delete test2;
+		test2 = nullptr;
+	}
+
 	return 0;
 }

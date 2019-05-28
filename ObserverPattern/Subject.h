@@ -9,8 +9,14 @@
 class Subject
 {
 public:
-	Subject() {};
-	virtual ~Subject() {};
+	Subject(const std::string name) :m_pSubjectName(name) {};
+	virtual ~Subject() 
+	{
+		if (m_pObserverList.empty())
+		{
+			m_pObserverList.clear();
+		}
+	}
 
 public:
 	void Attach(Observer* observer) 
@@ -20,8 +26,6 @@ public:
 			m_pObserverList.push_back(observer);
 		}
 	}
-	void SetSubjectName(const std::string name) { m_pSubjectName = name; }
-	std::string GetSubjectName() { return m_pSubjectName; }
 
 	virtual void Notify() = 0;
 

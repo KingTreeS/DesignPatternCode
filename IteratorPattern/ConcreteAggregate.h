@@ -4,36 +4,29 @@
 
 #include <vector>
 #include "Aggregate.h"
+#include "ConcreteIterator.h"
 
-template<typename T>
-class ConcreteAggregate :public Aggregate<T>
+class ConcreteAggregate :public Aggregate
 {
 public:
-	ConcreteAggregate() : m_pVector(nullptr) {};
+	ConcreteAggregate() {};
 	virtual ~ConcreteAggregate() {};
 
 public:
-	virtual int Count() override
+	virtual Iterator* CreateIterator() override
 	{
-		return m_pVector.size();
+		return new ConcreteIterator(GetDataList());
 	}
 
-	virtual void Push(const T& val) override
+	virtual void SetData(std::string data) override
 	{
-		m_pVector.push_back(val);
+		m_pDataList.push_back(data);
 	}
 
-	virtual T& Pop(int index) override
+	virtual std::vector<std::string>* GetDataList()override
 	{
-		if (index >= Count())
-		{
-			return NULL;
-		}
-		return m_pVector[index];
+		return &m_pDataList;
 	}
-
-private:
-	std::vector<T&> m_pVector;
 
 };
 #endif // !_CONCRETE_AGGREGATE_H__

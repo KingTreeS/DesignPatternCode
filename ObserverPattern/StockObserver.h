@@ -9,14 +9,13 @@
 class StockObserver :public Observer
 {
 public:
-	StockObserver(Subject* subject, std::string name) :Observer(subject, name) {};
+	StockObserver(std::string name) :Observer(name) {};
 	virtual ~StockObserver() {};
 
 protected:
 	virtual void Update() override
 	{
-		std::cout << m_pSubject->GetSubjectName() << "来了,"
-			<< m_pObserverName << "快关闭股票，继续工作！！！" << std::endl;
+		std::cout << m_pObserverName << "快关闭股票，继续工作！！！" << std::endl;
 	}
 
 };

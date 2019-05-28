@@ -41,6 +41,7 @@ public:
 		if (cashSuper != nullptr)
 		{
 			delete cashSuper;
+			cashSuper = nullptr;
 		}
 	}
 

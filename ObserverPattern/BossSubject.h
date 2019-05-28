@@ -9,7 +9,7 @@
 class BossSubject :public Subject
 {
 public:
-	BossSubject(const std::string name) { SetSubjectName(name); }
+	BossSubject(const std::string name) :Subject(name) {};
 	virtual ~BossSubject() {};
 
 public:
@@ -17,7 +17,7 @@ public:
 	{
 		for (auto observer : m_pObserverList)
 		{
-			std::cout << "老板通知：" << std::endl;
+			std::cout << "通知：" << m_pSubjectName << "老板来了" << std::endl;
 			observer->Update();
 		}
 	}

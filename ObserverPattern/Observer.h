@@ -10,20 +10,13 @@ class Subject;
 class Observer
 {
 public:
-	Observer(Subject* subject, std::string name) :m_pSubject(nullptr), m_pObserverName(name)
-	{
-		if (subject != nullptr)
-		{
-			m_pSubject = subject;
-		}
-	}
+	Observer(std::string name) :m_pObserverName(name) {};
 	virtual ~Observer() {};
 	
 public:
 	virtual void Update() = 0;
 
 protected:
-	Subject* m_pSubject;
 	std::string m_pObserverName;
 
 };

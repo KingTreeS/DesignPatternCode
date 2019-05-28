@@ -1,0 +1,4 @@
+﻿  IteratorPattern.cpp
+e:\vsproject\designpattern\designpatterncode\iteratorpattern\concreteiterator.h(56): warning C4715: “ConcreteIterator::Next”: 不是所有的控件路径都返回值
+e:\vsproject\designpattern\designpatterncode\iteratorpattern\concreteiterator.h(89): warning C4715: “ConcreteIterator::CurrentItem”: 不是所有的控件路径都返回值
+  IteratorPattern.vcxproj -> E:\VSProject\DesignPattern\DesignPatternCode\x64\Debug\IteratorPattern.exe

@@ -1,0 +1,4 @@
+﻿  pch.cpp
+  StrategyFactory.cpp
+e:\vsproject\designpattern\designpatterncode\strategyfactory\cashcontext.h(26): warning C4244: “参数”: 从“double”转换到“const int”，可能丢失数据
+  StrategyFactory.vcxproj -> E:\VSProject\DesignPattern\DesignPatternCode\x64\Debug\StrategyPattern.exe

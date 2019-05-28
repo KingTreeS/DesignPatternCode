@@ -3,8 +3,7 @@
 #define _MANAGER_H__
 
 #include <string>
-
-class Request;
+#include "Request.h"
 
 class Manager
 {

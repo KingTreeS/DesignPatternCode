@@ -2,17 +2,29 @@
 #ifndef _AGGREGATE_H__
 #define _AGGREGATE_H__
 
-template<typename T>
+#include <vector>
+#include "Iterator.h"
+
 class Aggregate
 {
 public:
 	Aggregate() {};
-	virtual ~Aggregate() {};
+	virtual ~Aggregate() 
+	{
+		if (!m_pDataList.empty())
+		{
+			m_pDataList.clear();
+		}
+	}
 
 public:
-	virtual int Count() = 0;
-	virtual void Push(const T& val) = 0;
-	virtual T& Pop(int index) = 0;
+	virtual Iterator* CreateIterator() = 0;
+	virtual void SetData(std::string data) = 0;
+	virtual std::vector<std::string>* GetDataList() = 0;
+
+
+protected:
+	std::vector<std::string> m_pDataList;
 
 };
 #endif // !_AGGREGATE_H__
